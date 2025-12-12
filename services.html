@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Dan Legend</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/YOUR_NEW_KIT_CODE.js" crossorigin="anonymous"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
+    <style>
+        .services-section {
+            background: linear-gradient(135deg, #1a1f3a 0%, #2d3561 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-left-color: #fff;
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            color: var(--heading-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ======== HEADER & NAVIGATION ======== -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Dan Legend</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="services.html" class="active-link">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== MAIN CONTENT ======== -->
+    <main>
+        <section id="services" class="section services-section">
+            <div class="container">
+                <h2 class="section-title fade-in">What I Do</h2>
+                <div class="services-grid">
+
+                    <!-- Service 1: Web Development -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <h3>Custom Web Development</h3>
+                        <p>I build fast, responsive, and user-friendly websites from scratch, from landing pages to complex web applications.</p>
+                    </div>
+
+                    <!-- Service 2: UI/UX Design -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon"><i class="fas fa-palette"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>Designing clean, modern, and intuitive interfaces that provide a seamless user experience and easy navigation.</p>
+                    </div>
+
+                    <!-- Service 3: Performance Optimization -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <h3>Performance Optimization</h3>
+                        <p>Improving website speed and performance to ensure fast load times, better SEO, and higher user retention.</p>
+                    </div>
+
+                    <!-- Service 4: AI Integration -->
+                    <div class="service-card fade-in">
+                        <div class="service-icon"><i class="fas fa-robot"></i></div>
+                        <h3>AI Integration</h3>
+                        <p>Integrating AI-powered features like chatbots, recommendation engines, and analytics into websites for smarter interactions.</p>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; All rights reserved. | Designed <i class="fas fa-heart"></i> by Dan Morris</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

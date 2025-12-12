@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Dan Legend</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome (working version) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        .gallery-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery-img {
+            width: 300px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+        .close-gallery {
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">Dan Legend</a>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active-link">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="portfolio" class="section">
+        <div class="container">
+
+            <h2 class="section-title">Projects Gallery</h2>
+
+            <div class="portfolio-grid">
+
+                <!-- PROJECT 1 -->
+<article class="project-card">
+    <img src="images/project1.jpg" alt="Smart Home Dashboard">
+    <div class="project-info">
+        <h3>Smart Home Dashboard</h3>
+        <p>Lighting & temperature control system.</p>
+        <!-- Gallery button -->
+          
+        
+        <!-- Live demo button -->
+        <a href="https://691ed81886c3341d5950d418--fascinating-crepe-7d436a.netlify.app/login.html" 
+           target="_blank" class="btn secondary-btn">View Live</a>
+    </div>
+</article>
+
+<!-- GALLERY 1 -->
+<div id="gallery1" class="gallery-modal">
+    <span class="close-gallery">&times;</span>
+    <div class="gallery-content">
+        <img src="images/project1.png" class="gallery-img">
+    </div>
+</div>
+
+
+
+                <!-- PROJECT 2 -->
+<article class="project-card">
+    <img src="images/project-dangpt.png" alt="DanGPT">
+    <div class="project-info">
+        <h3>DanGPT</h3>
+        <p>An AI to guide users through my website and answer questions concerning me and my work.</p>
+        
+        <p>(Still under development)</p>
+        <a href="#gallery2" class="btn primary-btn open-gallery">View Image</a>
+    </div>
+</article>
+
+<!-- GALLERY 2 -->
+<div id="gallery2" class="gallery-modal">
+    <span class="close-gallery">&times;</span>
+
+    <div class="gallery-content">
+        <img src="images/project-dangpt.png" class="gallery-img">
+    </div>
+</div>
+
+               
+
+                
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Daniel Morris. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.open-gallery').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).style.display = "block";
+        });
+    });
+
+    document.querySelectorAll('.close-gallery').forEach(btn => {
+        btn.addEventListener('click', function () {
+            this.parentElement.style.display = "none";
+        });
+    });
+</script>
+
+</body>
+</html>
