@@ -586,22 +586,7 @@ section {
 }
 
 /* ======== RESPONSIVE DESIGN ======== */
-@media (max-width: 768px) {
-    .nav ul {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: var(--secondary-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        padding-top: 50px;
-        transition: var(--transition);
-    }
 
-    .nav.active ul {
         left: 0;
     }
 
@@ -690,23 +675,50 @@ nav li {
   box-sizing: border-box;
 }
 
-/* ====== Mobile Media Queries ====== */
+/* ===== MOBILE NAVIGATION ===== */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    text-align: center;
-  }
+    /* Hamburger visible */
+    .mobile-menu-toggle {
+        display: block;
+    }
 
-  .project-card {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
+    /* Hide nav by default */
+    .nav {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        height: calc(100% - 70px);
+        background-color: var(--secondary-color);
+        display: none;          /* hidden initially */
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        gap: 20px;
+        z-index: 100;
+        transition: var(--transition);
+    }
 
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form button {
-    width: 100%;
+    /* Show nav when active */
+    .nav.active {
+        display: flex;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav li {
+        margin: 15px 0;
+    }
+}
+
   }
 }
 
 }
+
