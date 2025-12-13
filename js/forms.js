@@ -1,4 +1,7 @@
-// forms.js
+// ====== forms.js ======
+
+// Base API URL for your Railway backend
+const API_URL = 'https://portofoliobackend-production.up.railway.app';
 
 // ===== CONTACT FORM =====
 const contactForm = document.getElementById('contact-form');
@@ -15,7 +18,7 @@ if (contactForm) {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/api/contact', {
+            const response = await fetch(`${API_URL}/api/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
@@ -50,7 +53,7 @@ if (bookingForm) {
         };
 
         try {
-            const response = await fetch('portofoliobackend-production.up.railway.app', {
+            const response = await fetch(`${API_URL}/api/booking`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(bookingData)
@@ -68,4 +71,3 @@ if (bookingForm) {
         }
     });
 }
-
