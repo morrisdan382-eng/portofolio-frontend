@@ -643,4 +643,70 @@ section {
         height: 70%;
         bottom: 80px;
     }
+/* ====== Global Container ====== */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* ====== Responsive Images & Videos ====== */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====== Navigation ====== */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  margin: 0.5rem;
+}
+
+/* ====== Project Cards ====== */
+.project-card {
+  width: 48%;
+  margin: 1%;
+  box-sizing: border-box;
+}
+
+/* ====== Contact Form ====== */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* ====== Mobile Media Queries ====== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+  }
+}
+
 }
