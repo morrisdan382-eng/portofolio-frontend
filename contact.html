@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Dan Legend</title>
 
     <!-- Font Awesome & Google Fonts -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +14,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+
 
     <style>
         /* ====== CONTACT PAGE CUSTOM STYLES ====== */
@@ -104,6 +104,8 @@
             }
         }
     </style>
+    <script src="js/hamburger.js" defer></script>
+
 </head>
 <body>
     <!-- ===== HEADER ===== -->
@@ -131,20 +133,28 @@
                 <div class="contact-grid">
                     
                     <!-- ===== CONTACT INFO ===== -->
-                    <div class="contact-info fade-in">
-                        <h3>Let's Build Something Awesome Together</h3>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:morrisdan382@gmail.com?subject=Booking%20Request" target="_blank">morrisdan382@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <a href="https://wa.me/254715148169?text=Hi%20Dan,%20I%20would%20like%20to%20book%20your%20service" target="_blank">WhatsApp Me</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <a href="" target="_blank"></a>
-                        </div>
+<div class="contact-info fade-in">
+    <h3>Let's Build Something Awesome Together</h3>
+
+    <!-- Email -->
+    <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:morrisdan382@gmail.com" target="_blank">Email Me</a>
+    </div>
+
+    <!-- WhatsApp -->
+    <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/254715148169?text=Hi%20Dan,%20I%20would%20like%20to%20book%20your%20service" target="_blank">WhatsApp Me</a>
+    </div>
+
+    <!-- GitHub -->
+    <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </div>
+</div>
+
 
                         
 
@@ -167,6 +177,33 @@
             </div>
         </section>
     </main>
+<!-- ===== CONTACT INFO ===== -->
+<div class="contact-info fade-in">
+    <h3>Contact Me</h3>
+
+    <div class="contact-buttons">
+        <!-- Email Button -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=morrisdan382@gmail.com&su=Booking%20Request" target="_blank" class="contact-btn email-btn">
+    <i class="fas fa-envelope"></i> Gmail
+</a>
+
+        </a>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/254715148169?text=Hi%20Dan,%20I%20would%20like%20to%20book%20your%20service" target="_blank" class="contact-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+
+        <a href="https://t.me/Resident21" target="_blank" class="contact-btn telegram">
+    <i class="fab fa-telegram-plane"></i>
+    Telegram
+</a>
+
+
+       
+       
+    </div>
+</div>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
@@ -181,4 +218,3 @@
 
 </body>
 </html>
-
