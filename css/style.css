@@ -425,6 +425,53 @@ section {
     outline: none;
     border-color: var(--primary-color);
 }
+/* ===== CONTACT BUTTONS ===== */
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* space between icon and text */
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Email Button */
+.contact-btn.email-btn {
+    background-color: #1a73e8; /* Google blue */
+}
+.contact-btn.email-btn:hover {
+    background-color: #155ab6;
+    transform: scale(1.05);
+}
+
+/* WhatsApp Button */
+.contact-btn.whatsapp-btn {
+    background-color: #25D366; /* WhatsApp green */
+}
+.contact-btn.whatsapp-btn:hover {
+    background-color: #1ebe57;
+    transform: scale(1.05);
+}
+
+/* GitHub Button */
+.contact-btn.github-btn {
+    background-color: #333; /* GitHub dark */
+}
+.contact-btn.github-btn:hover {
+    background-color: #242424;
+    transform: scale(1.05);
+}
+
 
 /* ======== FOOTER ======== */
 .footer {
@@ -586,7 +633,22 @@ section {
 }
 
 /* ======== RESPONSIVE DESIGN ======== */
+@media (max-width: 768px) {
+    .nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-top: 50px;
+        transition: var(--transition);
+    }
 
+    .nav.active ul {
         left: 0;
     }
 
@@ -628,97 +690,4 @@ section {
         height: 70%;
         bottom: 80px;
     }
-/* ====== Global Container ====== */
-.container {
-  max-width: 1200px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
 }
-
-/* ====== Responsive Images & Videos ====== */
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ====== Navigation ====== */
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-nav li {
-  margin: 0.5rem;
-}
-
-/* ====== Project Cards ====== */
-.project-card {
-  width: 48%;
-  margin: 1%;
-  box-sizing: border-box;
-}
-
-/* ====== Contact Form ====== */
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  box-sizing: border-box;
-}
-
-/* ===== MOBILE NAVIGATION ===== */
-@media (max-width: 768px) {
-    /* Hamburger visible */
-    .mobile-menu-toggle {
-        display: block;
-    }
-
-    /* Hide nav by default */
-    .nav {
-        position: fixed;
-        top: 70px;
-        right: 0;
-        width: 200px;
-        height: calc(100% - 70px);
-        background-color: var(--secondary-color);
-        display: none;          /* hidden initially */
-        flex-direction: column;
-        align-items: center;
-        padding-top: 30px;
-        gap: 20px;
-        z-index: 100;
-        transition: var(--transition);
-    }
-
-    /* Show nav when active */
-    .nav.active {
-        display: flex;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav li {
-        margin: 15px 0;
-    }
-}
-
-  }
-}
-
-}
-
